@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ilaaj Saathi Impact</title>
+  <meta name="description" content="Live, anonymous usage numbers for Ilaaj Saathi: families checked, seniors found, cards made.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla&family=Hind:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Rozha+One&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .impact { padding-block: clamp(40px, 6vw, 72px) 72px; }
+    .impact h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin: 6px 0 12px; }
+    .impact .lede { max-width: 62ch; }
+    .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
+    .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: grid; gap: 4px; }
+    .tile b { font-family: var(--f-display); font-weight: 400; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.05; font-variant-numeric: tabular-nums; }
+    .tile span { color: var(--ink-2); font-size: .95rem; line-height: 1.4; }
+    .tile.hot { border-color: var(--marigold); box-shadow: inset 0 3px 0 var(--marigold); }
+    .panel { margin-top: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+    .panel h2 { font-family: var(--f-display); font-weight: 400; font-size: 1.4rem; }
+    .panel .sub { color: var(--ink-3); font-size: .9rem; margin-top: 2px; }
+    .chart-wrap { position: relative; margin-top: 18px; }
+    .chart { width: 100%; height: 240px; display: block; }
+    .chart .grid { stroke: var(--line); stroke-width: 1; }
+    .chart .axis { fill: var(--ink-3); font: 500 11px var(--f-mono); }
+    .chart .bar { fill: var(--teal); transition: opacity .2s; }
+    .chart .hit { fill: transparent; cursor: default; }
+    .chart .hit:hover + .bar, .chart .bar.on { opacity: .75; }
+    .tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); padding: 6px 10px; border-radius: 8px; font-size: .85rem; white-space: nowrap; transform: translate(-50%, -110%); opacity: 0; transition: opacity .15s; }
+    .tip.on { opacity: 1; }
+    .funnel { display: grid; gap: 10px; margin-top: 16px; }
+    .funnel-row { display: grid; grid-template-columns: minmax(120px, 190px) 1fr 70px; gap: 12px; align-items: center; font-size: .95rem; }
+    .funnel-track { height: 12px; border-radius: 999px; background: var(--bg-2); overflow: hidden; }
+    .funnel-track i { display: block; height: 100%; border-radius: 999px; background: var(--teal); width: 0; transition: width 1.2s var(--ease-out); }
+    .funnel-row b { font-family: var(--f-mono); font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+    .empty { margin-top: 36px; padding: 28px; border: 1.5px dashed var(--line); border-radius: 18px; background: var(--surface); }
+    .empty h2 { font-family: var(--f-display); font-weight: 400; font-size: 1.5rem; margin-bottom: 8px; }
+    .empty p { color: var(--ink-2); max-width: 62ch; }
+    .empty code { font-family: var(--f-mono); font-size: .9em; background: var(--bg-2); padding: 1px 6px; border-radius: 6px; }
+    details { margin-top: 16px; }
+    summary { cursor: pointer; color: var(--teal); font-weight: 600; }
+    .table-wrap { overflow-x: auto; margin-top: 10px; }
+    table { border-collapse: collapse; font-size: .9rem; min-width: 480px; }
+    th, td { text-align: right; padding: 6px 12px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+    th:first-child, td:first-child { text-align: left; font-family: var(--f-mono); }
+    th { color: var(--ink-3); font-weight: 500; }
+    .privacy { margin-top: 26px; color: var(--ink-3); font-size: .9rem; max-width: 70ch; }
+    @media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .funnel-row { grid-template-columns: 1fr 60px; } .funnel-track { grid-column: 1 / -1; grid-row: 2; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="./">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" class="bm-bg"/><path d="M6 22h7l3-7 5 13 3-8 2 2h8" class="bm-pulse"/><circle cx="31" cy="11" r="3.2" class="bm-dot"/></svg>
+        <span class="brand-name">Ilaaj Saathi</span>
+      </a>
+      <a class="btn btn-ghost" style="margin-left:auto;min-height:40px" href="./">Back to the helper</a>
+    </div>
+  </header>
+
+  <main class="impact">
+    <div class="wrap">
+      <p class="eyebrow">Impact · live</p>
+      <h1>Who Ilaaj Saathi has helped</h1>
+      <p class="lede">Every number here is an anonymous count. We never store names, phone numbers, Aadhaar numbers or answers — only that a check was finished, a result was shown or a card was made.</p>
+
+      <div id="empty" class="empty" hidden>
+        <h2>Counters aren’t switched on yet</h2>
+        <p>This deployment has no counter database connected, so there is nothing to show. To turn it on, create a free Upstash Redis database and add <code>UPSTASH_REDIS_REST_URL</code> and <code>UPSTASH_REDIS_REST_TOKEN</code> to the hosting settings. Counting starts from that moment.</p>
+      </div>
+      <div id="error" class="empty" hidden>
+        <h2>Couldn’t load the numbers</h2>
+        <p>The impact service didn’t answer. Try again in a minute.</p>
+      </div>
+
+      <div id="data" hidden>
+        <div class="tiles">
+          <div class="tile"><b id="tChecks">0</b><span>2-minute checks finished</span></div>
+          <div class="tile hot"><b id="tSeniors">0</b><span>Families with an entitled member aged 70+</span></div>
+          <div class="tile"><b id="tLikely">0</b><span>Families told they’re likely covered</span></div>
+          <div class="tile"><b id="tShares">0</b><span>Results shared on WhatsApp</span></div>
+          <div class="tile"><b id="tChats">0</b><span>Questions answered by Saathi</span></div>
+          <div class="tile hot"><b id="tCards">0</b><span>People who told us they got their card</span></div>
+        </div>
+
+        <section class="panel" aria-labelledby="dailyH">
+          <h2 id="dailyH">Checks finished per day</h2>
+          <p class="sub">Last 30 days, India time</p>
+          <div class="chart-wrap">
+            <svg class="chart" id="chart" role="img" aria-label="Bar chart of checks finished per day over the last 30 days"></svg>
+            <div class="tip" id="tip"></div>
+          </div>
+          <details>
+            <summary>Show as a table</summary>
+            <div class="table-wrap"><table id="table"></table></div>
+          </details>
+        </section>
+
+        <section class="panel" aria-labelledby="funnelH">
+          <h2 id="funnelH">From visit to card</h2>
+          <p class="sub">All time</p>
+          <div class="funnel" id="funnel"></div>
+        </section>
+        <p class="privacy" id="updated"></p>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    const $ = (s) => document.querySelector(s);
+    const fmt = (n) => Number(n || 0).toLocaleString('en-IN');
+
+    function drawChart(rows) {
+      const svg = $('#chart');
+      const W = svg.clientWidth || 640, H = 240, pad = { l: 34, r: 8, t: 12, b: 26 };
+      svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      const max = Math.max(4, ...rows.map((r) => r.check_completed));
+      const step = Math.pow(10, Math.floor(Math.log10(max)));
+      const top = Math.ceil(max / step) * step;
+      const y = (v) => pad.t + (H - pad.t - pad.b) * (1 - v / top);
+      const bw = (W - pad.l - pad.r) / rows.length;
+      const ns = 'http://www.w3.org/2000/svg';
+      const el = (tag, attrs) => { const e = document.createElementNS(ns, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+      svg.replaceChildren();
+      [0, top / 2, top].forEach((v) => {
+        svg.appendChild(el('line', { class: 'grid', x1: pad.l, x2: W - pad.r, y1: y(v), y2: y(v) }));
+        const tx = el('text', { class: 'axis', x: pad.l - 6, y: y(v) + 4, 'text-anchor': 'end' });
+        tx.textContent = fmt(v); svg.appendChild(tx);
+      });
+      const tip = $('#tip');
+      rows.forEach((r, i) => {
+        const x = pad.l + i * bw;
+        const h = Math.max(0, y(0) - y(r.check_completed));
+        const hit = el('rect', { class: 'hit', x, y: pad.t, width: bw, height: H - pad.t - pad.b });
+        const w = Math.max(2, bw - 2);
+        const bar = el('path', { class: 'bar', d: h > 0 ? `M${x + 1},${y(0)} v${-(h - Math.min(4, h))} q0,-${Math.min(4, h)} ${Math.min(4, w / 2)},-${Math.min(4, h)} h${w - 2 * Math.min(4, w / 2)} q${Math.min(4, w / 2)},0 ${Math.min(4, w / 2)},${Math.min(4, h)} v${h - Math.min(4, h)} z` : '' });
+        const show = () => { tip.textContent = `${r.date}: ${fmt(r.check_completed)} checks`; tip.style.left = (x + bw / 2) / W * 100 + '%'; tip.style.top = y(r.check_completed) + 'px'; tip.classList.add('on'); bar.classList.add('on'); };
+        const hide = () => { tip.classList.remove('on'); bar.classList.remove('on'); };
+        hit.addEventListener('pointerenter', show); hit.addEventListener('pointerleave', hide);
+        svg.append(hit, bar);
+        if (i % 7 === 1 || i === rows.length - 1) {
+          const tx = el('text', { class: 'axis', x: x + bw / 2, y: H - 8, 'text-anchor': 'middle' });
+          tx.textContent = r.date.slice(5); svg.appendChild(tx);
+        }
+      });
+    }
+
+    function table(rows) {
+      const t = $('#table');
+      t.innerHTML = '<thead><tr><th>Date</th><th>Visits</th><th>Checks</th><th>Questions</th><th>Shares</th><th>Cards</th></tr></thead>';
+      const tb = document.createElement('tbody');
+      rows.slice().reverse().forEach((r) => {
+        const tr = document.createElement('tr');
+        [r.date, r.visit, r.check_completed, r.chat, r.share, r.got_card].forEach((v, i) => { const td = document.createElement('td'); td.textContent = i ? fmt(v) : v; tr.appendChild(td); });
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb);
+    }
+
+    function funnel(tot) {
+      const steps = [['Visited', tot.visit], ['Started the check', tot.check_started], ['Finished the check', tot.check_completed], ['Opened an official portal', tot.portal_click + tot.hospital_click], ['Got their card', tot.got_card]];
+      const max = Math.max(1, ...steps.map((s) => s[1]));
+      const f = $('#funnel');
+      f.replaceChildren();
+      steps.forEach(([label, v]) => {
+        const row = document.createElement('div');
+        row.className = 'funnel-row';
+        row.innerHTML = `<span></span><div class="funnel-track"><i></i></div><b></b>`;
+        row.querySelector('span').textContent = label;
+        row.querySelector('b').textContent = fmt(v);
+        f.appendChild(row);
+        requestAnimationFrame(() => requestAnimationFrame(() => { row.querySelector('i').style.width = (v / max * 100) + '%'; }));
+      });
+    }
+
+    try {
+      const res = await fetch('/api/stats');
+      const data = await res.json();
+      if (!data.configured) { $('#empty').hidden = false; }
+      else {
+        const t = data.totals;
+        $('#tChecks').textContent = fmt(t.check_completed);
+        $('#tSeniors').textContent = fmt(t.senior_found);
+        $('#tLikely').textContent = fmt(t.result_covered + t.result_seniorCovered + t.result_likely);
+        $('#tShares').textContent = fmt(t.share);
+        $('#tChats').textContent = fmt(t.chat);
+        $('#tCards').textContent = fmt(t.got_card);
+        $('#data').hidden = false;
+        drawChart(data.daily);
+        table(data.daily);
+        funnel(t);
+        $('#updated').textContent = `Updated ${new Date(data.updatedAt).toLocaleString('en-IN')}. Counts can include repeat visits from the same person.`;
+        addEventListener('resize', () => drawChart(data.daily));
+      }
+    } catch { $('#error').hidden = false; }
+  </script>
+</body>
+</html>

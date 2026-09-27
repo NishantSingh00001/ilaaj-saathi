@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ilaaj Saathi</title>
+  <meta name="description" content="Check in 2 minutes if your family gets free hospital treatment up to ₹5 lakh a year under Ayushman Bharat PM-JAY. Hindi and English, with voice. Independent and open source.">
+  <meta name="theme-color" content="#0E6E5E">
+  <meta name="repo" content="https://github.com/NishantSingh00001/ilaaj-saathi">
+  <meta property="og:title" content="Ilaaj Saathi · इलाज साथी">
+  <meta property="og:description" content="₹5 लाख तक का मुफ़्त इलाज — 2 मिनट में जाँचें कि आपका परिवार हक़दार है या नहीं।">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla&family=Hind:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Rozha+One&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="booting">
+  <a class="skip" href="#check" data-i18n="nav.check"></a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Ilaaj Saathi">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="11" class="bm-bg"/>
+          <path d="M6 22h7l3-7 5 13 3-8 2 2h8" class="bm-pulse"/>
+          <circle cx="31" cy="11" r="3.2" class="bm-dot"/>
+        </svg>
+        <span class="brand-name" data-i18n="brand"></span>
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#check" data-i18n="nav.check"></a>
+        <a href="#covered" data-i18n="nav.covered"></a>
+        <a href="#card" data-i18n="nav.card"></a>
+        <a href="#ask" data-i18n="nav.ask"></a>
+      </nav>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="">
+        <span data-lang="hi">हिं</span><span data-lang="en">EN</span><span data-lang="bn">বাং</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <svg class="ecg" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+        <path class="ecg-line" d="M0 96 H250 l18 -8 14 8 H330 l10 18 16 -86 16 104 12 -36 10 8 H560 l14 -6 14 6 H700 l10 18 16 -86 16 104 12 -36 10 8 H930 l18 -8 14 8 H1010 l10 18 16 -86 16 104 12 -36 10 8 H1200"/>
+      </svg>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow load" style="--d:0" data-i18n="hero.eyebrow"></p>
+          <h1 class="hero-title">
+            <span class="line"><span class="load-line" style="--d:1" data-i18n="hero.title1"></span></span>
+            <span class="line"><span class="load-line" style="--d:2" data-i18n="hero.title2"></span></span>
+            <span class="line accent"><span class="load-line" style="--d:3" data-i18n="hero.title3"></span></span>
+          </h1>
+          <p class="hero-sub load" style="--d:5" data-i18n="hero.sub"></p>
+          <div class="hero-ctas load" style="--d:6">
+            <a class="btn btn-primary" href="#check">
+              <span data-i18n="hero.cta"></span>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#ask" data-i18n="hero.cta2"></a>
+          </div>
+          <ul class="trust load" style="--d:7">
+            <li data-i18n="hero.trust1"></li>
+            <li data-i18n="hero.trust2"></li>
+            <li data-i18n="hero.trust3"></li>
+          </ul>
+        </div>
+
+        <div class="hero-card-stage">
+          <div class="cover-card" id="coverCard">
+            <div class="cc-guilloche" aria-hidden="true"></div>
+            <div class="cc-shine" aria-hidden="true"></div>
+            <div class="cc-top">
+              <span class="cc-label" data-i18n="card.label"></span>
+              <span class="cc-seal" aria-hidden="true"></span>
+            </div>
+            <div class="cc-amount">
+              <span class="cc-rupee">₹</span><span id="ccAmount">5,00,000</span>
+            </div>
+            <div class="cc-per" data-i18n="card.per"></div>
+            <div class="cc-chips">
+              <span class="chip" style="--i:0" data-i18n="card.chip1"></span>
+              <span class="chip" style="--i:1" data-i18n="card.chip2"></span>
+              <span class="chip" style="--i:2" data-i18n="card.chip3"></span>
+            </div>
+            <div class="cc-foot">
+              <span class="cc-mono">PM-JAY · AB</span>
+              <span class="cc-cashless" data-i18n="card.cashless"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE GAP -->
+    <section class="gap">
+      <div class="wrap gap-grid">
+        <div class="gap-copy" data-reveal>
+          <p class="eyebrow" data-i18n="gap.eyebrow"></p>
+          <h2 class="h2" data-i18n="gap.title"></h2>
+        </div>
+        <div class="gap-figure" data-reveal>
+          <div class="gap-bar" role="img" aria-label="1.36 crore of 6 crore">
+            <div class="gap-fill" style="--p:0.227"></div>
+          </div>
+          <div class="gap-stats">
+            <div class="stat">
+              <span class="stat-num" data-count="6" data-suffix-hi=" करोड़" data-suffix-en=" crore" data-suffix-bn=" কোটি">6 करोड़</span>
+              <span class="stat-label" data-i18n="gap.s1"></span>
+            </div>
+            <div class="stat stat-hot">
+              <span class="stat-num" data-count="1.36" data-decimals="2" data-suffix-hi=" करोड़" data-suffix-en=" crore" data-suffix-bn=" কোটি">1.36 करोड़</span>
+              <span class="stat-label" data-i18n="gap.s2"></span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="55" data-suffix-hi=" करोड़+" data-suffix-en=" crore+" data-suffix-bn=" কোটি+">55 करोड़+</span>
+              <span class="stat-label" data-i18n="gap.s3"></span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="38" data-suffix-hi="%" data-suffix-en="%">38%</span>
+              <span class="stat-label" data-i18n="gap.s4"></span>
+            </div>
+          </div>
+          <p class="source-note" data-i18n="gap.source"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKER -->
+    <section class="check" id="check">
+      <div class="wrap check-grid">
+        <div class="check-intro" data-reveal>
+          <p class="eyebrow" data-i18n="check.eyebrow"></p>
+          <h2 class="h2" data-i18n="check.title"></h2>
+          <p class="lede" data-i18n="check.sub"></p>
+        </div>
+        <div class="checker" id="checker" aria-live="polite">
+          <div class="checker-top">
+            <span class="checker-step" id="checkerStep"></span>
+            <div class="checker-progress" aria-hidden="true"><span id="checkerBar"></span></div>
+          </div>
+          <div class="checker-stage" id="checkerStage"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT'S COVERED -->
+    <section class="covered" id="covered">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow" data-i18n="bill.eyebrow"></p>
+          <h2 class="h2" data-i18n="bill.title"></h2>
+        </div>
+        <div class="covered-grid">
+          <div class="receipt-wrap">
+            <div class="receipt" id="receipt">
+              <div class="rc-head">
+                <span class="rc-cross" aria-hidden="true"></span>
+                <div>
+                  <div class="rc-hosp" data-i18n="bill.hospital"></div>
+                  <div class="rc-sub" data-i18n="bill.patient"></div>
+                </div>
+              </div>
+              <div class="rc-row rc-cols"><span data-i18n="bill.item"></span><span data-i18n="bill.pay"></span></div>
+              <ol class="rc-lines">
+                <li style="--i:0"><span data-i18n="bill.l1"></span><b>₹0</b></li>
+                <li style="--i:1"><span data-i18n="bill.l2"></span><b>₹0</b></li>
+                <li style="--i:2"><span data-i18n="bill.l3"></span><b>₹0</b></li>
+                <li style="--i:3"><span data-i18n="bill.l4"></span><b>₹0</b></li>
+                <li style="--i:4"><span data-i18n="bill.l5"></span><b>₹0</b></li>
+                <li style="--i:5"><span data-i18n="bill.l6"></span><b>₹0</b></li>
+              </ol>
+              <div class="rc-total"><span data-i18n="bill.total"></span><b>₹0.00</b></div>
+              <p class="rc-foot" data-i18n="bill.foot"></p>
+              <div class="rc-stamp" aria-hidden="true" data-i18n="card.cashless"></div>
+            </div>
+          </div>
+          <div class="facts">
+            <div class="fact" data-reveal style="--i:0"><h3 data-i18n="fact.1t"></h3><p data-i18n="fact.1"></p></div>
+            <div class="fact" data-reveal style="--i:1"><h3 data-i18n="fact.2t"></h3><p data-i18n="fact.2"></p></div>
+            <div class="fact" data-reveal style="--i:2"><h3 data-i18n="fact.3t"></h3><p data-i18n="fact.3"></p></div>
+            <div class="fact fact-muted" data-reveal style="--i:3"><h3 data-i18n="fact.4t"></h3><p data-i18n="fact.4"></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO GET THE CARD -->
+    <section class="how" id="card">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow" data-i18n="how.eyebrow"></p>
+          <h2 class="h2" data-i18n="how.title"></h2>
+        </div>
+        <ol class="steps" id="steps">
+          <li class="step" style="--i:0"><span class="step-dot">1</span><h3 data-i18n="how.1t"></h3><p data-i18n="how.1"></p></li>
+          <li class="step" style="--i:1"><span class="step-dot">2</span><h3 data-i18n="how.2t"></h3><p data-i18n="how.2"></p></li>
+          <li class="step" style="--i:2"><span class="step-dot">3</span><h3 data-i18n="how.3t"></h3><p data-i18n="how.3"></p></li>
+          <li class="step" style="--i:3"><span class="step-dot">4</span><h3 data-i18n="how.4t"></h3><p data-i18n="how.4"></p></li>
+        </ol>
+        <div class="how-foot" data-reveal>
+          <p data-i18n="how.alt"></p>
+          <div class="how-links">
+            <a class="btn btn-primary" href="https://beneficiary.nha.gov.in/" target="_blank" rel="noopener" data-track="portal_click" data-i18n="how.portal"></a>
+            <a class="btn btn-ghost" href="https://hospitals.pmjay.gov.in/Search/empnlWorkFlow.htm?actionFlag=ViewRegisteredHosptlsMap" target="_blank" rel="noopener" data-track="hospital_click" data-i18n="how.hospitals"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHTS -->
+    <section class="rights">
+      <div class="wrap rights-grid">
+        <div data-reveal>
+          <p class="eyebrow" data-i18n="rights.eyebrow"></p>
+          <h2 class="h2" data-i18n="rights.title"></h2>
+          <ul class="rights-list">
+            <li data-i18n="rights.1"></li>
+            <li data-i18n="rights.2"></li>
+            <li data-i18n="rights.3"></li>
+          </ul>
+        </div>
+        <div class="helpline" data-reveal>
+          <span class="helpline-label" data-i18n="rights.helpline"></span>
+          <div class="odometer" id="odometer" aria-label="14555">
+            <span class="od-digit" data-d="1"></span><span class="od-digit" data-d="4"></span><span class="od-digit" data-d="5"></span><span class="od-digit" data-d="5"></span><span class="od-digit" data-d="5"></span>
+          </div>
+          <button class="btn btn-marigold" id="copyHelpline" type="button" data-i18n="rights.copy"></button>
+          <a class="grievance" href="https://cgrms.pmjay.gov.in/" target="_blank" rel="noopener" data-i18n="rights.grievance"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASK -->
+    <section class="ask" id="ask">
+      <div class="wrap ask-grid">
+        <div class="ask-intro" data-reveal>
+          <p class="eyebrow" data-i18n="ask.eyebrow"></p>
+          <h2 class="h2" data-i18n="ask.title"></h2>
+          <p class="lede" data-i18n="ask.sub"></p>
+          <div class="chips" id="askChips">
+            <button type="button" class="q-chip" data-i18n="ask.chip1"></button>
+            <button type="button" class="q-chip" data-i18n="ask.chip2"></button>
+            <button type="button" class="q-chip" data-i18n="ask.chip3"></button>
+            <button type="button" class="q-chip" data-i18n="ask.chip4"></button>
+          </div>
+        </div>
+        <div class="chat" id="chat">
+          <div class="chat-log" id="chatLog" aria-live="polite"></div>
+          <form class="chat-form" id="chatForm" autocomplete="off">
+            <button class="icon-btn mic" id="micBtn" type="button" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+              <span class="sr" data-i18n="ask.mic"></span>
+            </button>
+            <label class="sr" for="chatInput" data-i18n="ask.placeholder"></label>
+            <input id="chatInput" name="q" type="text" maxlength="600" data-i18n-placeholder="ask.placeholder">
+            <button class="icon-btn send" id="sendBtn" type="submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+              <span class="sr" data-i18n="ask.send"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand brand-foot" href="#top">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" rx="11" class="bm-bg"/>
+            <path d="M6 22h7l3-7 5 13 3-8 2 2h8" class="bm-pulse"/>
+            <circle cx="31" cy="11" r="3.2" class="bm-dot"/>
+          </svg>
+          <span class="brand-name" data-i18n="brand"></span>
+        </a>
+        <p class="foot-about" data-i18n="foot.about"></p>
+        <div class="got-card" id="gotCard">
+          <span data-i18n="foot.gotCard"></span>
+          <button type="button" class="btn btn-small" id="gotCardBtn" data-i18n="foot.gotCardYes"></button>
+        </div>
+      </div>
+      <div>
+        <h3 class="foot-h" data-i18n="foot.sources"></h3>
+        <ul class="foot-sources">
+          <li><a href="https://nha.gov.in/PM-JAY" target="_blank" rel="noopener">National Health Authority — PM-JAY</a></li>
+          <li><a href="https://www.pmindia.gov.in/en/news_updates/cabinet-approves-health-coverage-to-all-senior-citizens-of-the-age-70-years-and-above-irrespective-of-income-under-ayushman-bharat-pradhan-mantri-jan-arogya-yojana-ab-pm-jay/" target="_blank" rel="noopener">PMO — Coverage for all seniors 70+ (2024)</a></li>
+          <li><a href="https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=153425&amp;ModuleId=3&amp;reg=3&amp;lang=1" target="_blank" rel="noopener">PIB — PM-JAY progress (Nov 2024)</a></li>
+          <li><a href="https://ddindia.co.in/2026/09/ayushman-bharat-pm-jay-marks-8-years-covers-over-48-5-crore-people/" target="_blank" rel="noopener">DD India — PM-JAY at 8 years (Sep 2026)</a></li>
+          <li><a href="https://academic.oup.com/heapol/article/38/3/289/6881114" target="_blank" rel="noopener">Parisi et al. — Awareness of PM-JAY (2023)</a></li>
+        </ul>
+        <p class="foot-meta" data-i18n="foot.verified"></p>
+        <p class="foot-meta"><span data-i18n="foot.built"></span> · <a href="impact.html" data-i18n="foot.impact"></a> · <a href="https://github.com/NishantSingh00001/ilaaj-saathi" id="repoLink" target="_blank" rel="noopener" data-i18n="foot.code"></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <noscript><p class="noscript">Ilaaj Saathi needs JavaScript. For help, call the free PM-JAY helpline 14555.</p></noscript>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

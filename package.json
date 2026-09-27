@@ -1,0 +1,13 @@
+{
+  "name": "ilaaj-saathi",
+  "version": "0.1.0",
+  "description": "Hindi/English helper that tells Indian families in 2 minutes whether they get free hospital care under Ayushman Bharat PM-JAY, with an AI agent grounded in official facts.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=18" }
+}
