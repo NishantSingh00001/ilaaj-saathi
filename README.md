@@ -7,7 +7,7 @@ Built for **Code for a Billion — Bharat Agentic-AI Hackathon 2026** · Impact 
 > Ilaaj Saathi is an independent, open-source project. It is not a government website and does not collect personal data.
 
 ---
-
+## Live Demo: https://ilaaj-saathi.vercel.app/
 ## The problem
 
 PM-JAY pays for up to **₹5 lakh of hospital treatment per family per year**, cashless, at **38,000+ hospitals**. More than **55 crore people** fall under it. Since October 2024, **every Indian aged 70 or above** is covered whatever their income. The money is there, but people don't claim it:
